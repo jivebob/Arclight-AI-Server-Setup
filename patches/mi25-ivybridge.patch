@@ -17,6 +17,35 @@
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
+
+--- a/ggml/src/ggml-hip/CMakeLists.txt
++++ b/ggml/src/ggml-hip/CMakeLists.txt
+@@ -50,5 +50,5 @@
+-if (${hip_VERSION} VERSION_LESS 6.1)
+-    message(FATAL_ERROR "At least ROCM/HIP V6.1 is required")
+-endif()
++if (FALSE)
++    message(FATAL_ERROR "At least ROCM/HIP V6.1 is required")
++endif()
+
+--- a/ggml/src/ggml-cuda/vendors/hip.h
++++ b/ggml/src/ggml-cuda/vendors/hip.h
+@@ -121,3 +121,4 @@
+-#define cudaStreamWaitEvent hipStreamWaitEvent
++inline static hipError_t ggml_hipStreamWaitEvent(hipStream_t stream, hipEvent_t event, unsigned int flags = 0) { return hipStreamWaitEvent(stream, event, flags); }
++#define cudaStreamWaitEvent ggml_hipStreamWaitEvent
+
+--- a/ggml/src/ggml-cpu/CMakeLists.txt
++++ b/ggml/src/ggml-cpu/CMakeLists.txt
+@@ -85,5 +85,5 @@
+-    ggml_add_cpu_backend_variant(haswell SSE42 AVX F16C AVX2 BMI2 FMA)
+-    ggml_add_cpu_backend_variant(skylakex SSE42 AVX F16C AVX2 BMI2 FMA AVX512)
+-    ggml_add_cpu_backend_variant(icelake SSE42 AVX F16C AVX2 BMI2 FMA AVX512 AVX512_VBMI AVX512_VNNI)
+-    ggml_add_cpu_backend_variant(alderlake SSE42 AVX F16C AVX2 BMI2 FMA AVX_VNNI)
++    # ggml_add_cpu_backend_variant(haswell SSE42 AVX F16C AVX2 BMI2 FMA)
++    # ggml_add_cpu_backend_variant(skylakex SSE42 AVX F16C AVX2 BMI2 FMA AVX512)
++    # ggml_add_cpu_backend_variant(icelake SSE42 AVX F16C AVX2 BMI2 FMA AVX512 AVX512_VBMI AVX512_VNNI)
++    # ggml_add_cpu_backend_variant(alderlake SSE42 AVX F16C AVX2 BMI2 FMA AVX_VNNI)
 @@ -620,4 +620,4 @@
 -    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mavx2 -mfma")
 -    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mavx2 -mfma")
