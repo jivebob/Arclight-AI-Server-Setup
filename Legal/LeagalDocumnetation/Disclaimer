@@ -1,0 +1,7 @@
+## Disclaimer
+
+The software, container templates, and deployment scripts provided in this repository are supplied "as is," without warranty of any kind, express or implied. 
+
+Deploying custom configurations, modifying server hardware, or running alternative inference stacks on legacy infrastructure carries inherent risks—ranging from thermal throttling and unstable board states to complete component failure. You assume full responsibility for any hardware damage, data loss, configuration errors, or system instability resulting from the use of these materials. 
+
+Use at your own risk. Verify all firmware revisions, hardware compatibilities, and operational thresholds before applying them to production or mission-critical environments.
