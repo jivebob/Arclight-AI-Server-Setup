@@ -29,3 +29,11 @@ While the software stack and containers provided here are flexible across variou
 ## License
 
 This project is released under the **[AGPL-3.0 license](https://github.com/jivebob/Arclight-AI-Server-Setup/blob/main/Legal/LICENSE.md)**. You are free to use, modify, and distribute this work provided that derivative works remain open under the same terms.
+
+---
+
+## Author's Note
+
+One of my biggest reasons for releasing this project is that I have hit the ceiling of what a single person can build in a reasonable timeframe. I am not a traditional software engineer—my background is in network administration alongside vanilla HTML, CSS, W3.CSS, and JavaScript. I used AI heavily to bring the core codebase of this project to life.
+
+I am opening this up to ask the GitHub community for help in pushing this framework forward and seeing what it is truly capable of. Everyone is welcome to contribute to the [Discussions](https://github.com/jivebob/Arclight-AI-Server-Setup/discussions) where new ideas and concepts can grow—please just keep conversations constructive and on-topic.    
